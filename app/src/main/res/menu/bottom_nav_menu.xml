@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home_4211162"
+        android:title="홈" />
+    <item
+        android:id="@+id/nav_activity"
+        android:icon="@drawable/book_4793251"
+        android:title="활동" />
+    <item
+        android:id="@+id/nav_friend"
+        android:icon="@drawable/conversation_4793269"
+        android:title="친구" />
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/profile_4211178"
+        android:title="프로필" />
+</menu>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_bg_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_step_1" />
+
+    <ImageView
+        android:id="@+id/iv_bg_front"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:alpha="0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="#E6C8E6C9"
+            android:elevation="4dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lv.1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#333333" />
+
+            <ProgressBar
+                android:id="@+id/progress_exp"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="12dp"
+                android:layout_marginStart="12dp"
+                android:max="100"
+                android:progress="30" />
+
+            <Button
+                android:id="@+id/btn_test_exp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="경험치 획득 테스트"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="#FF9800"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_stage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="24dp"
+            android:paddingBottom="80dp"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:reverseLayout="true"
+            tools:listitem="@layout/item_stage" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_levelup_effect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="🎉 LEVEL UP! 🎉"
+        android:textColor="#FF9800"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:alpha="0"
+        android:scaleX="0"
+        android:scaleY="0"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="5"
+        android:elevation="10dp" />
+
+    <TextView
+        android:id="@+id/tv_xp_floating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="+50 XP"
+        android:textColor="#4CAF50"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:elevation="10dp" />
+
+</FrameLayout>

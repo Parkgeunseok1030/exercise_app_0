@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="#F7FBF7">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="32dp"/>
+
+    <EditText
+        android:id="@+id/et_login_id"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="아이디 입력"
+        android:inputType="text"
+        android:padding="16dp"
+        android:background="#F0F0F0"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/et_login_password"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="비밀번호 입력"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:background="#F0F0F0"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="로그인"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#4CAF50"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_go_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="처음이신가요? 회원가입 하기"
+        android:textSize="16sp"
+        android:textColor="#2196F3"
+        android:padding="8dp"/>
+
+</LinearLayout>

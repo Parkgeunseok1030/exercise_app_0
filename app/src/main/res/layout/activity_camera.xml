@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.exercise_app.GraphicOverlay
+        android:id="@+id/graphicOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@id/viewFinder"
+        android:layout_alignBottom="@id/viewFinder" />
+
+    <TextView
+        android:id="@+id/tv_exercise_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:text="푸쉬업 모드"
+        android:textColor="#FFEB3B"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_exercise_type"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="0 / 10\n(1/3세트)"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="5"/>
+
+    <TextView
+        android:id="@+id/tv_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="3"
+        android:textColor="#FFEB3B"
+        android:textSize="120sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="10"/>
+
+    <TextView
+        android:id="@+id/tv_grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="PERFECT!"
+        android:textColor="#4CAF50"
+        android:textSize="80sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:shadowColor="#000000"
+        android:shadowDx="4"
+        android:shadowDy="4"
+        android:shadowRadius="10"/>
+
+    <TextView
+        android:id="@+id/tv_coaching_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="110dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="#B3000000"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="자세를 잡고 시작 버튼을 누르세요"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_start_exercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="운동 시작"
+        android:textSize="24sp"
+        android:padding="15dp"
+        android:backgroundTint="#FF9800"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_rest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/tv_rest_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:text="꿀맛 같은 휴식 시간"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+
+        <ProgressBar
+            android:id="@+id/progress_rest"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            android:max="30"
+            android:progress="30"
+            android:progressDrawable="@drawable/circular_timer" />
+
+        <TextView
+            android:id="@+id/tv_rest_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="30"
+            android:textColor="#FFEB3B"
+            android:textSize="60sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btn_skip_rest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:text="휴식 건너뛰기 ⏩"
+            android:backgroundTint="#616161"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_next_ready"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="준비 완료"
+        android:textSize="24sp"
+        android:padding="20dp"
+        android:visibility="gone"
+        android:backgroundTint="#4CAF50" />
+
+</RelativeLayout>
